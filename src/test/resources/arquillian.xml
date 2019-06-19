@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<arquillian xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://jboss.org/schema/arquillian"
+    xsi:schemaLocation="http://jboss.org/schema/arquillian
+    http://jboss.org/schema/arquillian/arquillian_1_0.xsd">
+     
+    <group qualifier="Grid" default="true">
+ 
+        <container qualifier="remote-gf1" default="true" >
+            <configuration>
+                <property name="adminUser">admin</property>
+                <property name="adminPassword">changeit</property>
+                <property name="adminHost">localhost</property>
+                <property name="adminPort">4848</property>
+                <property name="target">server</property>
+            </configuration>
+        </container>
+    
+        <!--container qualifier="remote-gf2">
+            <configuration>
+                <property name="adminUser">admin</property>
+                <property name="adminPassword">changeit</property>
+                <property name="adminHttps">false</property>
+                <property name="adminHost">localhost</property>
+                <property name="adminPort">4848</property>
+                <property name="serverHttps">false</property>
+                <property name="target">ejb-instance</property>
+            </configuration>
+        </container-->
+ 
+    </group>
+</arquillian>
